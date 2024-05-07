@@ -1,5 +1,5 @@
 ################# S3 ##################
-bucket_name = "tfstates_bucket"
+bucket_name = "tfstates-bucket"
 description = "Bucket con los archivos .tfstates"
 #env         = ["develop", "testing", "master"]
 
