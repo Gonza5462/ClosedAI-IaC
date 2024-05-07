@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "tfstates_bucket" {
-  bucket = "${var.bucket_name}-${random_string.sufijo}"
+  bucket = "${var.bucket_name}-${random_string.sufijo.id}"
 
   tags = {
     "Description" = "${var.description}"
@@ -20,4 +20,5 @@ resource "random_string" "sufijo" {
   length  = 8
   special = false
   upper   = false
+  numeric = false
 }
