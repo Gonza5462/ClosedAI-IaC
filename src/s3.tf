@@ -17,7 +17,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "tfstates_bucket_e
 }
 
 resource "random_string" "sufijo" {
-  length = 8
+  length  = 8
   special = false
-  upper = false
+  upper   = false
 }
