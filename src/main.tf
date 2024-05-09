@@ -16,12 +16,12 @@ provider "aws" {
 }
 
 module "ec2_backend" {
-  source = "./modulos/ec2"
+  source = "./modules/ec2"
 }
 
 module "s3-tfstate" {
-  source      = "./modulos/s3-tfstate"
-  bucket_name = "tfstates-bucket"
+  source      = "./modules/s3-tfstate"
+  bucket_name = "XCoin-ClosedAI-tfstates-bucket"
   description = "Bucket con los archivos .tfstates"
 
 }
