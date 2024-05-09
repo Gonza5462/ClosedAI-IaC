@@ -1,5 +1,5 @@
 ################# Variables GLOBALES ##################
-bucket_name = "xcoin-closedai-tfstates-bucket"
+bucket_name    = "xcoin-closedai-tfstates-bucket"
 dynamodb_table = "terraform-state-lock"
 
 tags = {
