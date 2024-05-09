@@ -1,8 +1,3 @@
-################# S3 ##################
-bucket_name = "tfstates-bucket"
-description = "Bucket con los archivos .tfstates"
-#env         = ["develop", "testing", "master"]
-
 ################# TAGS GLOBALES ##################
 tags = {
   "owner"       = "ClosedAI"
