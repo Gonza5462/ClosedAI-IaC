@@ -36,6 +36,18 @@ module "s3-tfstate" {
   #dynamodb_table = "terraform-state-lock"
 }
 
+module "rds" {
+  source = "./modules/rds"
+}
+
+output "ec2_public_ip" {
+  value = module.ec2_backend.ec2_public_ip
+}
+
+output "db_host" {
+  value = module.rds.db_host
+}
+
 #module "terraform_state_backend" {
 #  source = "cloudposse/tfstate-backend/aws"
 #  version     = "1.4.1"
