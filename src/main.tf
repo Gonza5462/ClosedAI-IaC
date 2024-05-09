@@ -1,4 +1,11 @@
 terraform {
+  backend "s3" {
+    bucket = var.bucket_name
+    dynamodb_table = var.dynamodb_table
+    key = "global/statefile/terraform.tfstate"
+    region = "us-east-1"
+    encrypt = true
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -21,9 +28,9 @@ module "ec2_backend" {
 
 module "s3-tfstate" {
   source      = "./modules/s3-tfstate"
-  bucket_name = "xcoin-closedai-tfstates-bucket"
+  bucket_name = var.bucket_name
   description = "Bucket con los archivos .tfstates"
-
+  dynamodb_table = var.dynamodb_table
 }
 
 #module "terraform_state_backend" {
