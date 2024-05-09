@@ -16,14 +16,14 @@ provider "aws" {
 }
 
 module "ec2_backend" {
-    source = "./modulos/ec2"
+  source = "./modulos/ec2"
 }
 
 module "s3-tfstate" {
-  source = "./modulos/s3-tfstate"
+  source      = "./modulos/s3-tfstate"
   bucket_name = "tfstates-bucket"
   description = "Bucket con los archivos .tfstates"
-  
+
 }
 
 #module "terraform_state_backend" {
