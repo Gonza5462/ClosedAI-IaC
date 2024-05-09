@@ -21,7 +21,7 @@ module "ec2_backend" {
 
 module "s3-tfstate" {
   source      = "./modules/s3-tfstate"
-  bucket_name = "XCoin-ClosedAI-tfstates-bucket"
+  bucket_name = "xcoin-closedai-tfstates-bucket"
   description = "Bucket con los archivos .tfstates"
 
 }
