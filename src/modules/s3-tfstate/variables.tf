@@ -3,7 +3,7 @@ variable "bucket_name" {
   type        = string
 }
 
-variable "description" {
+variable "bucket_description" {
   description = "Descripcion por variable."
   type        = string
 }

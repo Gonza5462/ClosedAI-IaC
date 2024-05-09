@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
-    bucket         = var.bucket_name
-    dynamodb_table = var.dynamodb_table
+    bucket         = "xcoin-closedai-tfstates-bucket"
+    dynamodb_table = "terraform-state-lock"
     key            = "global/statefile/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
@@ -27,10 +27,13 @@ module "ec2_backend" {
 }
 
 module "s3-tfstate" {
-  source         = "./modules/s3-tfstate"
-  bucket_name    = var.bucket_name
-  description    = "Bucket con los archivos .tfstates"
-  dynamodb_table = var.dynamodb_table
+  source             = "./modules/s3-tfstate"
+  bucket_name        = var.bucket_name
+  dynamodb_table     = var.dynamodb_table
+  bucket_description = var.bucket_description
+  #bucket_name    = "xcoin-closedai-tfstates-bucket"
+  #description    = "Bucket con los archivos .tfstates"
+  #dynamodb_table = "terraform-state-lock"
 }
 
 #module "terraform_state_backend" {

@@ -2,7 +2,7 @@ resource "aws_s3_bucket" "tfstate_bucket" {
   bucket        = var.bucket_name
   force_destroy = true
   tags = {
-    "Description" = var.description
+    "Description" = var.bucket_description
   }
 }
 
