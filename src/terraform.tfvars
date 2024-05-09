@@ -7,5 +7,5 @@ tags = {
   "region"      = "us-east-1"
   "IAC"         = "Terraform"
   "IAC_Version" = "v1.8.2"
-  env           = "Producción"
+  env           = "Produccion"
 }
