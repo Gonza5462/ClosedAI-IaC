@@ -4,6 +4,9 @@ resource "aws_s3_bucket" "tfstate_bucket" {
   tags = {
     "Description" = var.bucket_description
   }
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 resource "aws_s3_bucket_versioning" "tfstate_version" {
@@ -12,6 +15,9 @@ resource "aws_s3_bucket_versioning" "tfstate_version" {
       status = "Enabled"
     }
   
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "tfstates_bucket_encryption" {
@@ -21,6 +27,10 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "tfstates_bucket_e
     apply_server_side_encryption_by_default {
       sse_algorithm = "AES256"
     }
+  }
+
+  lifecycle {
+    prevent_destroy = true
   }
 }
 
@@ -32,4 +42,8 @@ resource "aws_dynamodb_table" "terraform_locks" {
      name = "LockID"
      type = "S"
    }
+
+  lifecycle {
+    prevent_destroy = true
+  }
 }
