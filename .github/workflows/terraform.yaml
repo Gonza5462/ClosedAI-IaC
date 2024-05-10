@@ -55,4 +55,4 @@ jobs:
         run: terraform state rm module.s3-tfstate.aws_dynamodb_table.terraform_locks module.s3-tfstate.aws_s3_bucket.tfstate_bucket module.s3-tfstate.aws_s3_bucket_server_side_encryption_configuration.tfstates_bucket_encryption module.s3-tfstate.aws_s3_bucket_versioning.tfstate_version
 
       - name: Terraform Destroy
-        run: terraform destroy
+        run: terraform destroy -auto-approve
