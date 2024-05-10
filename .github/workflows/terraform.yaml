@@ -45,8 +45,8 @@ jobs:
         id: plan
         run: terraform plan
 
-      - name: Terraform Apply
-        run: terraform apply -auto-approve
+      #- name: Terraform Apply
+      #  run: terraform apply -auto-approve
 
       - name: Terraform State list 
         run: terraform state list
