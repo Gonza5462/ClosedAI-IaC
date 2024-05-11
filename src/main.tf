@@ -17,9 +17,6 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
-  assume_role {
-    role_arn = "arn:aws:iam::452817723078:role/LabRole"
-  }
   default_tags {
     tags = var.tags
   }
@@ -43,9 +40,9 @@ module "rds" {
   source = "./modules/rds"
 }
 
-module "eks" {
-  source = "./modules/eks"
-}
+ module "ecr" {
+   source = "./modules/ecr"
+ }
 
 output "ec2_public_ip" {
   value = module.ec2_backend.ec2_public_ip

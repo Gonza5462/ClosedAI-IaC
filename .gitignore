@@ -1,3 +1,4 @@
 src/.terraform.lock.hcl
 src/.terraform/
 src/terraform.tfstate
+src/xcoin-mongodb.pem
