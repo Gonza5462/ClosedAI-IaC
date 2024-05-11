@@ -10,3 +10,12 @@ resource "aws_instance" "xcoin" {
     "sg-052f05f0390ce9d26",
   ]
 }
+
+
+resource "aws_eip" "mongodb_eip" {
+  instance = aws_instance.xcoin.id
+}
+
+output "EIP" {
+  value = aws_eip.mongodb_eip.public_ip
+}
