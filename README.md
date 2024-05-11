@@ -1,7 +1,11 @@
 # ClosedAI-IaC
 
 
-Conexion con IAM:
-https://aws.amazon.com/es/blogs/security/use-iam-roles-to-connect-github-actions-to-actions-in-aws/
 
-Thumbprint: 1b511abead59c6ce207077c0bf0e0043b1382612
+MongoDB:
+user: admin
+Pass: admin
+Ver si cambia la IP cuando se corta el lab:    ec2-54-88-69-141.compute-1.amazonaws.com
+Port: 27017
+
+Mongo funciona.
