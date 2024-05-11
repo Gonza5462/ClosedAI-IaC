@@ -1,11 +1,11 @@
 terraform {
-  #backend "s3" {
-  #  bucket         = "xcoin-closedai-tfstates-bucket"
-  #  dynamodb_table = "terraform-state-lock"
-  #  key            = "global/statefile/terraform.tfstate"
-  #  region         = "us-east-1"
-  #  encrypt        = true
-  #}
+  backend "s3" {
+    bucket         = "xcoin-closedai-tfstates-bucket"
+    dynamodb_table = "terraform-state-lock"
+    key            = "global/statefile/terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"

@@ -1,7 +1,7 @@
 
 ################# Variables GLOBALES ##################
-bucket_name        = "xcoin-closedai-tfstates-bucket2"
-dynamodb_table     = "terraform-state-lock2"
+bucket_name        = "xcoin-closedai-tfstates-bucket"
+dynamodb_table     = "terraform-state-locks"
 bucket_description = "Bucket con los archivos .tfstates"
 tags = {
   "owner"       = "ClosedAI"
