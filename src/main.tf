@@ -22,7 +22,8 @@ provider "aws" {
   }
 }
 
-module "ec2_backend" {
+
+module "ec2_db" {
   source = "./modules/ec2"
 }
 
@@ -31,36 +32,20 @@ module "s3-tfstate" {
   bucket_name        = var.bucket_name
   dynamodb_table     = var.dynamodb_table
   bucket_description = var.bucket_description
-  #bucket_name    = "xcoin-closedai-tfstates-bucket"
-  #description    = "Bucket con los archivos .tfstates"
-  #dynamodb_table = "terraform-state-lock"
 }
 
 module "rds" {
   source = "./modules/rds"
 }
 
- module "ecr" {
-   source = "./modules/ecr"
- }
+module "ecr" {
+  source = "./modules/ecr"
+}
 
 output "ec2_public_ip" {
-  value = module.ec2_backend.ec2_public_ip
+  value = module.ec2_db.ec2_public_ip
 }
 
 output "db_host" {
   value = module.rds.db_host
 }
-
-#module "terraform_state_backend" {
-#  source = "cloudposse/tfstate-backend/aws"
-#  version     = "1.4.1"
-#  namespace  = "XCoin-prod"
-#  stage      = "prod"
-#  name       = "terraform" 
-#  environment = "us-east-1"
-#  attributes = ["state"]
-#  terraform_backend_config_file_path = "."
-#  terraform_backend_config_file_name = "backend.tf"
-#  force_destroy                      = false
-#} 
