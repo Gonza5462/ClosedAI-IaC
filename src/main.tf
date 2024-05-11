@@ -49,3 +49,7 @@ output "ec2_public_ip" {
 output "db_host" {
   value = module.rds.db_host
 }
+
+output "EIP" {
+  value = aws_eip.mongodb_eip.public_ip
+}
