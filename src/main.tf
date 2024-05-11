@@ -51,5 +51,5 @@ output "db_host" {
 }
 
 output "EIP" {
-  value = aws_eip.mongodb_eip.public_ip
+  value = module.ec2_db.EIP
 }
