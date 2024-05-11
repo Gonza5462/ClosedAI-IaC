@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket         = "xcoin-closedai-tfstates-bucket"
-    dynamodb_table = "terraform-state-lock"
+    dynamodb_table = "terraform-state-locks"
     key            = "global/statefile/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
