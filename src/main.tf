@@ -17,6 +17,9 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
+  assume_role {
+    role_arn = "arn:aws:iam::452817723078:role/LabRole"
+  }
   default_tags {
     tags = var.tags
   }
