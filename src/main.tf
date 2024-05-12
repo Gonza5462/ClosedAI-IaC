@@ -46,9 +46,9 @@ output "ec2_public_ip" {
   value = module.ec2_db.ec2_public_ip
 }
 
-output "db_host" {
-  value = module.rds.db_host
-}
+# output "db_host" {
+#   value = module.rds.db_host
+# }
 
 output "EIP" {
   value = module.ec2_db.EIP
