@@ -34,9 +34,9 @@ module "s3-tfstate" {
   bucket_description = var.bucket_description
 }
 
-module "rds" {
-  source = "./modules/rds"
-}
+# module "rds" {
+#   source = "./modules/rds"
+# }
 
 module "ecr" {
   source = "./modules/ecr"
