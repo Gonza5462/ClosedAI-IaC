@@ -29,5 +29,5 @@ resource "aws_eip" "mongodb_eip" {
 }
 
 resource "aws_eip" "githubrunner_eip" {
-  instance = aws_instance.github_runner
+  instance = aws_instance.github_runner.id
 }
