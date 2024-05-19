@@ -1,22 +1,3 @@
-variable "tags" {
-  description = "Tags para asignar a los recursos."
-  type        = map(string)
-}
-variable "bucket_name" {
-  description = "Nombre del bucket."
-  type        = string
-}
-
-variable "bucket_description" {
-  description = "Descripcion por variable."
-  type        = string
-}
-
-variable "dynamodb_table" {
-  description = "Nombre del bucket."
-  type        = string
-}
-
 variable "app_cluster_name" {
   description = "ECS Cluster Name"
   type        = string
@@ -35,6 +16,11 @@ variable "app_task_name" {
 variable "availability_zones" {
   description = "us-east-1 AZs"
   type        = list(string)
+}
+
+variable "ecr_repo_url" {
+  description = "ECR Repo URL"
+  type        = string
 }
 
 variable "container_port" {
