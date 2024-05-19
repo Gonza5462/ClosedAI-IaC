@@ -23,7 +23,7 @@ resource "aws_ecs_task_definition" "xapp_task" {
   [
     {
       "name": "${var.app_task_name}",
-      "image": "${var.ecr_repo_url}",
+      "image": "${var.ecr_repo_url}:0.0.1",
       "essential": true,
       "portMappings": [
         {
