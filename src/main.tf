@@ -64,3 +64,7 @@ output "ec2_public_ip" {
 output "EIP" {
   value = module.ec2_db.EIP
 }
+
+output "ECR_Repository" {
+  value = module.ecr.repository_url
+}
