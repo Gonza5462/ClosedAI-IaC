@@ -47,9 +47,7 @@ resource "aws_alb" "application_load_balancer" {
   name               = var.application_load_balancer_name
   load_balancer_type = "application"
   subnets = [
-    "${aws_default_subnet.default_subnet_a.id}",
-    "${aws_default_subnet.default_subnet_b.id}",
-    "${aws_default_subnet.default_subnet_c.id}"
+    "subnet-0bc68bccc25aa8a3f"
   ]
   security_groups = ["${aws_security_group.load_balancer_security_group.id}"]
 }
@@ -102,7 +100,7 @@ resource "aws_ecs_service" "xapp_service" {
   }
 
   network_configuration {
-    subnets          = ["${aws_default_subnet.default_subnet_a.id}", "${aws_default_subnet.default_subnet_b.id}", "${aws_default_subnet.default_subnet_c.id}"]
+    subnets          = ["subnet-0bc68bccc25aa8a3f"]
     assign_public_ip = true
     security_groups  = ["${aws_security_group.service_security_group.id}"]
   }
