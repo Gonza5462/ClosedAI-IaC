@@ -25,6 +25,16 @@ resource "aws_ecs_task_definition" "xapp_task" {
       "name": "${var.app_task_name}",
       "image": "${var.ecr_repo_url}:0.0.1",
       "essential": true,
+      "environment": [
+        {
+          "name": "API_KEY",
+          "value": "_xoodEdJ9iTcWejMaIPopwcagkctu0zw"
+        },
+        {
+          "name": "PRIVATE_KEY",
+          "value": "c068f69fdaadd9896f96ce0eafd1fa5e21aefa2c43ead0b6d085c9a5459d1c25"
+        }
+      ],
       "portMappings": [
         {
           "containerPort": ${var.container_port},
