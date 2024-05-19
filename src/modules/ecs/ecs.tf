@@ -37,7 +37,7 @@ resource "aws_ecs_task_definition" "xapp_task" {
         "timeout": 5,
         "interval": 10,
         "startPeriod": 10
-      }
+      },
       "memory": 1024,
       "cpu": 512
     }
