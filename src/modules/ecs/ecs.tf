@@ -43,7 +43,7 @@ resource "aws_ecs_task_definition" "xapp_task" {
       ],
       "healthCheck": {
         "retries": 5,
-        "command": [ "CMD-SHELL", "curl -f http://localhost:3000/hello || exit 1" ],
+        "command": [ "CMD-SHELL", "curl -f http://localhost:3000/health || exit 1" ],
         "timeout": 5,
         "interval": 10,
         "startPeriod": 10
