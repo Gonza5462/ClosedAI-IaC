@@ -31,15 +31,15 @@ resource "aws_ecs_task_definition" "xapp_task" {
           "hostPort": ${var.container_port}
         }
       ],
-      "memory": 512,
-      "cpu": 256
+      "memory": 1024,
+      "cpu": 512
     }
   ]
   DEFINITION
   requires_compatibilities = ["FARGATE"]
   network_mode             = "awsvpc"
-  memory                   = 512
-  cpu                      = 256
+  memory                   = 1024
+  cpu                      = 512
   execution_role_arn       = "arn:aws:iam::452817723078:role/LabRole"
 }
 
@@ -47,7 +47,9 @@ resource "aws_alb" "application_load_balancer" {
   name               = var.application_load_balancer_name
   load_balancer_type = "application"
   subnets = [
-    "subnet-0bc68bccc25aa8a3f"
+    "${aws_default_subnet.default_subnet_a.id}",
+    "${aws_default_subnet.default_subnet_b.id}",
+    "${aws_default_subnet.default_subnet_c.id}"
   ]
   security_groups = ["${aws_security_group.load_balancer_security_group.id}"]
 }
@@ -100,7 +102,7 @@ resource "aws_ecs_service" "xapp_service" {
   }
 
   network_configuration {
-    subnets          = ["subnet-0bc68bccc25aa8a3f"]
+    subnets          = ["${aws_default_subnet.default_subnet_a.id}", "${aws_default_subnet.default_subnet_b.id}", "${aws_default_subnet.default_subnet_c.id}"]
     assign_public_ip = true
     security_groups  = ["${aws_security_group.service_security_group.id}"]
   }
