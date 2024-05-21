@@ -33,7 +33,7 @@ resource "aws_ecs_task_definition" "xapp_task" {
         {
           "name": "PRIVATE_KEY",
           "value": "c068f69fdaadd9896f96ce0eafd1fa5e21aefa2c43ead0b6d085c9a5459d1c25"
-        }
+        },
         {
           "name": "MONGODB_URI",
           "value": "mongodb://ec2-44-196-143-198.compute-1.amazonaws.com:27017"
