@@ -36,7 +36,7 @@ resource "aws_ecs_task_definition" "xapp_task" {
         },
         {
           "name": "MONGODB_URI",
-          "value": "mongodb://ec2-44-196-143-198.compute-1.amazonaws.com:27017"
+          "value": "mongodb://admin:admin@ec2-44-196-143-198.compute-1.amazonaws.com:27017/"
         }
       ],
       "portMappings": [
