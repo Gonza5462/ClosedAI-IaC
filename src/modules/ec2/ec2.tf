@@ -36,7 +36,6 @@ resource "aws_instance" "github_runner_febe" {
   }
   tags = {
     "Name" = "XCoin_GithubRunner_febe"
-    "demo" = "Esto es una demo"
   }
   vpc_security_group_ids = [
     "sg-052f05f0390ce9d26",
