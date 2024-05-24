@@ -67,6 +67,13 @@ jobs:
         id: init
         run: terraform init
 
+      - name: Save Terraform state
+        id: save_state
+        uses: actions/upload-artifact@v3
+        with:
+          name: terraform-state
+          path: src/.terraform
+
   terraform-plan:
     name: Terraform Plan
     needs: [terraform-init]
@@ -75,6 +82,20 @@ jobs:
       run:
         working-directory: src
     steps:
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+          aws-session-token:  ${{ secrets.AWS_SESSION_TOKEN }}
+
+      - name: Restore Terraform state
+        uses: actions/download-artifact@v3
+        with:
+          name: terraform-state
+          path: src/.terraform
+
       - name: Terraform Plan
         id: plan
         run: terraform plan
@@ -94,6 +115,12 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
           aws-session-token:  ${{ secrets.AWS_SESSION_TOKEN }}
+
+      - name: Restore Terraform state
+        uses: actions/download-artifact@v3
+        with:
+          name: terraform-state
+          path: src/.terraform
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
