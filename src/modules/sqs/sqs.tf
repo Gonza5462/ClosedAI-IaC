@@ -1,6 +1,6 @@
 resource "aws_sqs_queue" "sqs_queue" {
 
-  name                        = "crypto_sqs_07062024"
+  name                        = "crypto_sqs.fifo"
   fifo_queue                  = true
   content_based_deduplication = true
   delay_seconds               = 10
