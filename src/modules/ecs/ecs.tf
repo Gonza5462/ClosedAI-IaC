@@ -52,14 +52,14 @@ resource "aws_ecs_task_definition" "xapp_task" {
         "interval": 10,
         "startPeriod": 60
       },
-      "memory": 1024,
+      "memory": 2048,
       "cpu": 1024
     }
   ]
   DEFINITION
   requires_compatibilities = ["FARGATE"]
   network_mode             = "awsvpc"
-  memory                   = 1024
+  memory                   = 2048
   cpu                      = 1024
   execution_role_arn       = "arn:aws:iam::268120344536:role/LabRole"
 }
