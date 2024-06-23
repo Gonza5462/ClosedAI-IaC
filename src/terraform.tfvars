@@ -2,7 +2,7 @@
 ################# Variables GLOBALES ##################
 
 #################      S3 States     ##################
-bucket_name        = "xcoin-closedai-tfstates-bucket"
+bucket_name        = "xcoin-closedai-tfstates-bucket2"
 dynamodb_table     = "terraform-state-locks"
 bucket_description = "Bucket con los archivos .tfstates"
 

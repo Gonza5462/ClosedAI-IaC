@@ -36,7 +36,7 @@ resource "aws_ecs_task_definition" "xapp_task" {
         },
         {
           "name": "MONGODB_URI",
-          "value": "mongodb://admin:admin@ec2-44-196-143-198.compute-1.amazonaws.com:27017/"
+          "value": "mongodb://admin:admin@ec2-18-214-56-113.compute-1.amazonaws.com:27017/"
         }
       ],
       "portMappings": [
@@ -61,7 +61,7 @@ resource "aws_ecs_task_definition" "xapp_task" {
   network_mode             = "awsvpc"
   memory                   = 1024
   cpu                      = 512
-  execution_role_arn       = "arn:aws:iam::452817723078:role/LabRole"
+  execution_role_arn       = "arn:aws:iam::268120344536:role/LabRole"
 }
 
 resource "aws_alb" "application_load_balancer" {
