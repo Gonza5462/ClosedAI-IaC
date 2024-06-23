@@ -46,14 +46,14 @@ resource "aws_ecs_task_definition" "xapp_task" {
         }
       ],
       "healthCheck": {
-        "retries": 5,
+        "retries": 2,
         "command": [ "CMD-SHELL", "curl -f http://localhost:3000/health || exit 1" ],
-        "timeout": 5,
+        "timeout": 15,
         "interval": 10,
-        "startPeriod": 10
+        "startPeriod": 60
       },
       "memory": 1024,
-      "cpu": 512
+      "cpu": 1024
     }
   ]
   DEFINITION
