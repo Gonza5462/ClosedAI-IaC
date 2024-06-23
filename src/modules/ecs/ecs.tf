@@ -60,7 +60,7 @@ resource "aws_ecs_task_definition" "xapp_task" {
   requires_compatibilities = ["FARGATE"]
   network_mode             = "awsvpc"
   memory                   = 1024
-  cpu                      = 512
+  cpu                      = 1024
   execution_role_arn       = "arn:aws:iam::268120344536:role/LabRole"
 }
 
