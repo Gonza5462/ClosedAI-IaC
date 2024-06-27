@@ -37,6 +37,22 @@ resource "aws_ecs_task_definition" "xapp_task" {
         {
           "name": "MONGODB_URI",
           "value": "mongodb://admin:admin@ec2-18-214-56-113.compute-1.amazonaws.com:27017/"
+        },
+        {
+          "name": "AWS_ACCESS_KEY_ID",
+          "value": "ASIAT43JXY7MK5PUOTLB"
+        },
+        {
+          "name": "AWS_SECRET_ACCESS_KEY",
+          "value": "7T2CPH6FccTvipvvUsSc+pxeoNPkGGUfp0GnPkZz"
+        },
+        {
+          "name": "AWS_SESSION_TOKEN",
+          "value": "IQoJb3JpZ2luX2VjEEwaCXVzLXdlc3QtMiJIMEYCIQCrP17oqVm65cYT0+vQyYSwUllHJQTVF0PVWMe7JuiX5AIhALx1RQNsibyAGIrAOJ2zGohaixkDqKu4rlWKcIBTd/IDKr4CCPX//////////wEQABoMMjY4MTIwMzQ0NTM2Igw6aP/57RkZs82eS8sqkgLTBmzDNllzohPqaEAWZskumeLISzqQ/u5po6O84x5v2TH+Bhs+lcaNjlc3+2DPvkkIjMOt3YzmNc0eSUjITonnpeXJ4vzsDiTV8bXKIOtNtn1m7eTfyy4Bu6Pki/9HvOYtjJie+HSPDWERxC0445JvXjftKAl8XqZWl23nbPR6Hz2do1bbwxC+na38L/MNQDqfFuZ+OkJPUnXbWU/SqzbgQ41NSF0CsahZsKd15QlzCP8BLJyzz8nDR1h0uUNKhayc8bRwAy5dS+fTveX/ePvDVK8g8Cw/4cnXYGoMLV9UPYtECtHX1TaUWjDpFbl48d3rQlmUS3mskOVJACGpayxdzI+WqaMiVv/152bOhVh/qyziMOuM97MGOpwByFWaZgLGJf05kp1wN2rYGME+NddA7XSMDUHIrOhsCjtzXCqzhtKzIKGLfwlLhuB29QkbdfiUQ5wnQnqrLR5McaxcNKxcjDe9dNSwyEUklu02NNNEBQVT+UiywmS44888rzvxKzR+HV7+k0jpxmlOwouDlhl2aDVaE9We3qiDmEC7usVzt8qnQnODIyaGAVw4eCu+aKxZIa1kHBsG"
+        },
+        {
+          "name": "AWS_REGION",
+          "value": "us-east-1"
         }
       ],
       "portMappings": [
