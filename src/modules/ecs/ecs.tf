@@ -57,7 +57,7 @@ resource "aws_ecs_task_definition" "xapp_task" {
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "/ecs/${var.app_task_family}",
+          "awslogs-group": "/ecs/${var.app_task_famliy}",
           "awslogs-region": "us-east-1",
           "awslogs-stream-prefix": "${var.app_task_name}"
         }
