@@ -53,7 +53,15 @@ resource "aws_ecs_task_definition" "xapp_task" {
         "startPeriod": 60
       },
       "memory": 2048,
-      "cpu": 1024
+      "cpu": 1024,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/${var.app_task_family}",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "${var.app_task_name}"
+        }
+      }
     }
   ]
   DEFINITION
