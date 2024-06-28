@@ -40,15 +40,15 @@ resource "aws_ecs_task_definition" "xapp_task" {
         },
         {
           "name": "AWS_ACCESS_KEY_ID",
-          "value": "ASIAT43JXY7MD56V3HHB"
+          "value": "ASIAT43JXY7MJFZMJ4VM"
         },
         {
           "name": "AWS_SECRET_ACCESS_KEY",
-          "value": "sLDzhFoBgMRcgfuEbYlnm400S2+YkHqu5Y/WuJOY"
+          "value": "AthtiQvOo0UdHWNlIBQVHeVVLRsOY3s466SnQaF5"
         },
         {
           "name": "AWS_SESSION_TOKEN",
-          "value": "IQoJb3JpZ2luX2VjEGQaCXVzLXdlc3QtMiJIMEYCIQCQv42BbPO30WLbJ8B/H/gwd7ZSdO581dDRC2Q7Wp+xLAIhAKOHK2BqB6W0YeobKn0/WYHPLHJYpI+IdGKGexj+Mw60KrUCCB0QABoMMjY4MTIwMzQ0NTM2IgwNydYDjLhTczfrG10qkgIS/kRyOLDbpP8h3We2T5d3gNWiw0+K6pegreY5a4gzNEwIzyDefhtaojViKh8919c5MBAoAgUmXoumEIFxxM+I7snIVE8UU5w6DV5zLZDrG2gsXA2MbvDWQN2d1SiuWpGzjK4/YpdRaCnqZm7O3AW/udGHItKspp8bxBOINCt5ze9bG3vwo3/5Gvbq3hw6oi8+hfa6jkLF2Hwt8jK1QseNehLU+6rFhlJySQf+AQ6m84sHBWL5axY73rHIZU0Ccw2G73Vs9aqCatFGHo2jnIrVYGGCaBNvFHQNrL8riaQgJCHkeNasicM0Luc+awOPdSVQvkZInHj4H1MI92xJaS9s2/c3s5EHCyL0izrRbrlfdOkvMJ2t/LMGOpwBjOhwppAjkUNCDPj4PHFq6laseihOva0DwdwYGobc8dpJhDEo3E6rFN1MBP+eC56gKj10Ee7oNAms28OnAcXt2TxfZ/tFEam6ClUqp8bf2MkNe5HETRqn5k9lUSzunVP5rQZ8HgVIqZTVKNQF0dYZAFRMDm1VcKAjU0iW+JrQvwK55rbRh9FrUpXSJtMoJ6m+XyXeWCO/RUA98nwV"
+          "value": "IQoJb3JpZ2luX2VjEGYaCXVzLXdlc3QtMiJHMEUCIQCjlZ6pWdZ3IIHzbV132OfH0U/aprYlK4ohCux/YA2PZQIgc+TLEcMbPAxy5Gs/bOiXW8PX43ERYKRXE2PloFSjodcqtQIIHxAAGgwyNjgxMjAzNDQ1MzYiDPy0BpDoyq4ljC5ISiqSAqKsKBALZOZ21tZ5mYxvFWWuf8BWJ/V1Et8sKRrN0hbOTwFFncYJ/3+gUlHpha5xY9slXhq1PYdD28C0nghFGTj0UkCTmABpzjhZk/7vi8aOUVLrQ7DReRr8F3wv7OGQcsd9j8E4W5Rk0ri8at27gCoC5b8c4ZEGDYWBUzunDywJ5veabNwG71ES68lrGsJLRJhQZnoGr1NVk1YN2UJlzTjHrD9Y0YNFqAwyJJCgbk8UgqN04jk1p0I0jLpqsj51xZZetVTcLgMpblwRm3VlAEa47mmCSVnWEhDAh5jLy6Bxji0BoX1AVbcNYo/tqC+SWdJ39r8TNcQ6HDy1cst+WzG8CgyWYdX4z8cL7z9D/1g0pqYwjdT8swY6nQFJKt2AYgFxFq7OjYHRx2wvmQeU/LrUiFLVtQkttt6E+/NDqu/po8TXr04vEm8JU61idrIhhM3zIeUxdaFcl3uBQBsaaBNpryZvTZ6w2BFSNolao9eqgxdQ+9+1+KzxhWq6P11fIaIfMy4uEmoee/D1UUJ9e8HX9AGMeAbj+OF41EkaNv0zc0NshEPpNn8bYf23u9ieqsy9Mlz24Rjs"
         },
         {
           "name": "AWS_REGION",
