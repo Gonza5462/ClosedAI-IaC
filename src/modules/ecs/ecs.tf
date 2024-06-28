@@ -40,15 +40,15 @@ resource "aws_ecs_task_definition" "xapp_task" {
         },
         {
           "name": "AWS_ACCESS_KEY_ID",
-          "value": "ASIAT43JXY7MK5PUOTLB"
+          "value": "ASIAT43JXY7MJEIANB55"
         },
         {
           "name": "AWS_SECRET_ACCESS_KEY",
-          "value": "7T2CPH6FccTvipvvUsSc+pxeoNPkGGUfp0GnPkZz"
+          "value": "zQaLjQWkBVMM0ucNg0IGxYGSL4uRkkA3movTzEBA"
         },
         {
           "name": "AWS_SESSION_TOKEN",
-          "value": "IQoJb3JpZ2luX2VjEEwaCXVzLXdlc3QtMiJIMEYCIQCrP17oqVm65cYT0+vQyYSwUllHJQTVF0PVWMe7JuiX5AIhALx1RQNsibyAGIrAOJ2zGohaixkDqKu4rlWKcIBTd/IDKr4CCPX//////////wEQABoMMjY4MTIwMzQ0NTM2Igw6aP/57RkZs82eS8sqkgLTBmzDNllzohPqaEAWZskumeLISzqQ/u5po6O84x5v2TH+Bhs+lcaNjlc3+2DPvkkIjMOt3YzmNc0eSUjITonnpeXJ4vzsDiTV8bXKIOtNtn1m7eTfyy4Bu6Pki/9HvOYtjJie+HSPDWERxC0445JvXjftKAl8XqZWl23nbPR6Hz2do1bbwxC+na38L/MNQDqfFuZ+OkJPUnXbWU/SqzbgQ41NSF0CsahZsKd15QlzCP8BLJyzz8nDR1h0uUNKhayc8bRwAy5dS+fTveX/ePvDVK8g8Cw/4cnXYGoMLV9UPYtECtHX1TaUWjDpFbl48d3rQlmUS3mskOVJACGpayxdzI+WqaMiVv/152bOhVh/qyziMOuM97MGOpwByFWaZgLGJf05kp1wN2rYGME+NddA7XSMDUHIrOhsCjtzXCqzhtKzIKGLfwlLhuB29QkbdfiUQ5wnQnqrLR5McaxcNKxcjDe9dNSwyEUklu02NNNEBQVT+UiywmS44888rzvxKzR+HV7+k0jpxmlOwouDlhl2aDVaE9We3qiDmEC7usVzt8qnQnODIyaGAVw4eCu+aKxZIa1kHBsG"
+          "value": "IQoJb3JpZ2luX2VjEFAaCXVzLXdlc3QtMiJHMEUCIQDlJ0uPLmezXwxHYvEv7mMY+65hO3PT/qYpTtiixQhdFwIgYgpJlpoKE53IHnb/tG86gp/Hpg3aYHCXHdCetYbpoR8qvgII+f//////////ARAAGgwyNjgxMjAzNDQ1MzYiDOgM6VpIC8gwH/Ls3iqSAjxOJhIwzdzvidu/8P506Nqyuf0L6JfK2e5951bZVgCprRdafEccCzciVJsEUHb7SakBkK2AdzXFWcYjph7MdbyMZL4hXR1psjtABHvcSBugCd6PQEBCRasgiMuIZ0AZuP3dQScCAPJjcfiJ243HW4c3wpmKUiHcmftxoidKZUc0myT62p6ZN7KVfvWQqfeUHAlN4yLwFXCFWhHxH6aK2kyxn4iN+c4t8pfE/Aa/vfU3WcYeGh9Y9qL1Om/YjHUjueVzDIdwQrqtvZdyAJdPv0aFWQSHj/o4OkEcRH/2ptOOxPjXgs6WVJZfbD4Nqai7FLqU9Gb+ywcSF5yW+2pXmxikz9Kb+8gBdchGUMWqrlYzod0wqvj3swY6nQHKfEc4B6huxyoIyazzeu/uFhZ4pPtUpMUtJ+gQS+CqFZlpWvnTrtK662BzW+ZE0hLaxEyE5PiPhqQ+kF2uoAxHD7KXaCNO+E4yHlD4NiQvz8wSdEciE1xA5KJCHYDdR5vjuo8EaXeeBg2lx/ztq3FwCjqhnENt+yNUyq+m+z6joJZPCOM7z9IeapJYNHkuRnf+tvpSxEw6OXHbkpQU"
         },
         {
           "name": "AWS_REGION",
