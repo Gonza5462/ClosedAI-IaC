@@ -23,9 +23,9 @@ provider "aws" {
 }
 
 
-# module "ec2_db" {
-#   source = "./modules/ec2"
-# }
+module "ec2_db" {
+  source = "./modules/ec2"
+}
 
 # module "sqs" {
 #   source = "./modules/sqs"
@@ -62,9 +62,9 @@ provider "aws" {
 #   app_service_name               = var.app_service_name
 # }
 
-# output "ec2_public_ip" {
-#   value = module.ec2_db.ec2_public_ip
-# }
+output "ec2_public_ip" {
+  value = module.ec2_db.ec2_public_ip
+}
 
 # output "sqs_url" {
 #   value = module.sqs.sqs_queue_url
@@ -78,9 +78,9 @@ provider "aws" {
 #   value = module.sns.sns_topic_arn
 # }
 
-# output "EIP" {
-#   value = module.ec2_db.EIP
-# }
+output "EIP" {
+  value = module.ec2_db.EIP
+}
 
 # output "ECR_Repository" {
 #   value = module.ecr.repository_url
